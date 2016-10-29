@@ -86,12 +86,13 @@ app.get("/contactList/:id", function(req,res){
 	//console.log(body);
 })
 
-app.put("/contactList/:id", function(req, res){
+app.put("/contactList", function(req, res){
 
-	var id = req.params.id;
+	//var id = req.params.id;
+	var id = req.body._id;
 	var body = req.body;
 
-	contact.updateContact(id, body, function(err, data){
+	contact.updateContact(id,body, function(err, data){
 
 
 		if(err){

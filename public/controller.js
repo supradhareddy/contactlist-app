@@ -67,7 +67,7 @@ $scope.editContact = function(id){
 
 $scope.updateContact = function(){
 
-	$http.put("/contactList/"+$scope.contact._id, $scope.contact).success(function(response){
+	$http.put("/contactList", $scope.contact).success(function(response){
 	refresh();
 
 	})

@@ -54,7 +54,7 @@ module.exports.editContactById = function(id, callback){
 Contact.findById(query, callback);
 }
 
-module.exports.updateContact = function(id, contact, callback){
+module.exports.updateContact = function( id, contact, callback){
 
 	Contact.update({_id:id},
 		{
